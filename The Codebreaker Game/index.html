@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Codebreaker Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>The Codebreaker Game</h1>
+        </header>
+        <div>
+            <button id="startGame">Start Game</button>
+            <select id="levelSelect" disabled>
+                <option value="1">Level 1: 4-digit codes (Numbers only)</option>
+                <option value="2">Level 2: 5-digit codes (Numbers and Letters)</option>
+                <option value="3">Level 3: 6-digit codes (Numbers, Letters, and Symbols)</option>
+            </select>
+        </div>
+        <main class="hidden" id="gamePlayArea">
+            <section class="game-controls">
+                <input type="text" id="guessInput" placeholder="Enter your guess..." autofocus>
+                <button id="submitGuess">Guess</button>
+                <button id="giveUp" class="hidden">Give Up</button>
+                <div id="timer">Time: 00:00</div>
+            </section>
+            <section class="game-info">
+                <div id="feedback"></div>
+                <div id="history"></div>
+            </section>
+        </main>
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <div id="leaderboardLevel1" class="leaderboard-list"><h3>Level 1 Top Scores</h3></div>
+            <div id="leaderboardLevel2" class="leaderboard-list"><h3>Level 2 Top Scores</h3></div>
+            <div id="leaderboardLevel3" class="leaderboard-list"><h3>Level 3 Top Scores</h3></div>
+        </section>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
